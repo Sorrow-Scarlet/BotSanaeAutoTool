@@ -17,5 +17,18 @@ namespace 早苗日刷工具
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            GetConfig configCheck = new GetConfig();
+            configCheck.OnInitializing();//生成一个GetConfig对象，在窗口启动时立刻检查Config.
+            GC.Collect();
+            GetTIMdata TimChecker = new GetTIMdata();
+            TimChecker.WhetherTIMisOn();
+        }
     }
 }
