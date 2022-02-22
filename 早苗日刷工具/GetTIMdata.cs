@@ -18,7 +18,6 @@ namespace 早苗日刷工具
         /// </summary>
         public void WhetherTIMisOn()
         {
-            //TIM pid:0000B47C
             Process [] proDet= Process.GetProcesses();
             bool Detecter = false;
             foreach (var IDs in proDet)
