@@ -19,10 +19,8 @@ namespace 早苗日刷工具
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            GetConfig configCheck = new GetConfig();
-            configCheck.OnInitializing();//生成一个GetConfig对象，在窗口启动时立刻检查Config.
-            GetTIMdata TimChecker = new GetTIMdata();
-            TimChecker.WhetherTIMisOn();//检查TIM是否已运行
+            GetConfig.OnInitializing();//静态方法替代对象，减少占用，在窗口启动时立刻检查Config.
+            GetTIMdata.WhetherTIMisOn(); ;//静态方法替代对象，减少占用，检查TIM是否已运行
 
         }
         private void button1_Click(object sender, EventArgs e)

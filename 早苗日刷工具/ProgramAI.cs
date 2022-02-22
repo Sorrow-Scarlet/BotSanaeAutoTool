@@ -5,7 +5,7 @@ namespace 早苗日刷工具
 {
     public class ProgramAI
     {
-        ///读取Config中的变量
+        //读取Config中的变量
         //设定变量 接收Config
         //需要读取Config，并且根据config为变量赋值
 
@@ -20,7 +20,7 @@ namespace 早苗日刷工具
         //由于win版TIM采用与win版QQ一致的自绘发送按钮，只能通过键盘来实现发送
         //参考https://www.cnblogs.com/T-ARF/p/9471887.html
         [DllImport("user32.dll")]
-        static extern IntPtr FindWindow(string ClassName, string WindwosName);
+        static extern IntPtr FindWindow(string ClassName, string WindowsName);
 
         [DllImport("user32.dll")]
         static extern void kbd_event(byte vk, byte vsacn, int flag, int wram);
@@ -34,16 +34,17 @@ namespace 早苗日刷工具
 
 
             GetConfig ConfigReader = new GetConfig();
-            
-            
-            //var win = FindWindow(null, name);
+            string configGroup;
+            //读取已经存在的config中的群名，然后填充到winapi提供的findwindow参数中
 
-            //kbd_event(0x01, 0, 0, 0);
-            //PostMsg(win, 0x0302, 0, 0);
-                                                 
-            //PostMsg(win, 0x0100, 13, 0);
-            //PostMsg(win, 0x0101, 13, 0);
-            //kbd_event(0x11, 0, 0x0002, 0);
+            var win = FindWindow(null, configGroup);
+
+            kbd_event(0x01, 0, 0, 0);
+            PostMsg(win, 0x0302, 0, 0);
+
+            PostMsg(win, 0x0100, 13, 0);
+            PostMsg(win, 0x0101, 13, 0);
+            kbd_event(0x11, 0, 0x0002, 0);
         }
 
         void TimeComparer()

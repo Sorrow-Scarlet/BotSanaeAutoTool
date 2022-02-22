@@ -16,7 +16,7 @@ namespace 早苗日刷工具
         /// <summary>
         /// 遍历计算机中所有进程，查找判断TIM是否存在
         /// </summary>
-        public void WhetherTIMisOn()
+        public static void WhetherTIMisOn()
         {
             Process [] proDet= Process.GetProcesses();
             bool Detecter = false;

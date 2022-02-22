@@ -8,7 +8,7 @@ namespace 早苗日刷工具
 
     public class GetConfig
     {
-        public string[] OnInitializing()//Config初始化，分为存在与不存在Config
+        public static string[] OnInitializing()//Config初始化，分为存在与不存在Config
         {
             string pathConfig = @".//Config.json";
             if (File.Exists(pathConfig) == true)//Config存在，非初次使用
