@@ -2,7 +2,7 @@
 </div>
 <p align="center">
   <a href="https://raw.githubusercontent.com/Sorrow-Scarlet/BotSanaeAutoTool/master/LICENSE">
-    <img src="https://img.shields.io/github/license/Sorrow-Scarlet/BotSanaeAutoTool" alt="license">
+    <img src="https://img.shields.io/badge/license-GPL--3.0-red" alt="license">
   </a>
 </p>   
 仍在制作<br>
